@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Waffle World</title>
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- Login Page -->
+<div id="page_login" class="box"> <img src="img\waffle_logo.png" >
+  <input type="email" placeholder="Email..." id="email_field" />
+  <input type="password" placeholder="Password..." id="password_field" />
+  <button onclick="login();" id="submit">Login to Account</button>
+  <a href="https://www.facebook.com/waffleworldcy/" class="fa fa-facebook"></a> <a href="https://www.instagram.com/waffle_world_cyprus/" class="fa fa-instagram"></a> <a href="https://www.youtube.com/user/CarbonsGoldenMalted/videos" class="fa fa-youtube"></a> </div>
+
+<!-- Main Page -->
+<div id="page_main" style="display: none"> <img src="img\waffle_logo.png" class="logo">
+ <div class="banner">
+  <img class="mySlides" src="img/banner/Golden-Barrel-Logo.png">
+  <img class="mySlides" src="img/banner/iron_banner.jpg">
+  <img class="mySlides" src="img/banner/KRAMPOUZ_Logo.png">
+  <img class="mySlides" src="img/banner/original.jpg">
+  <img class="mySlides" src="img/banner/PURPURRY_logo.jpg">
+</div>
+  <hr>
+  <div class="center">
+    <div class="container">
+      <button onclick="toggle_visibility('page_main');toggle_visibility('page_account');" class="button1">Account</button>
+      <button  onclick="toggle_visibility('page_main');toggle_visibility('page_product');"  class="button2"> Products</button>
+    </div>
+    <hr>
+  </div>
+  <footer>
+    <div class="row">
+      <div class="column"> <a href="http://www.tecnoblend.it/" target="_blank" > <img src="img\tecnoblend_logo.png" class="footh"> </a> </div>
+      <div class="column"> <a href="https://www.goldenmalted.com/"  target="_blank" > <img src="img\new_carbons_logo.png" class="footh2"> </a> </div>
+      <div class="column"> <a href="https://www.bussy.it/"  target="_blank" > <img src="img\bussy_logo.png" class="footh3"> </a> </div>
+    </div>
+    <div class="row SM_pos"> <a href="https://www.facebook.com/waffleworldcy/" class="fa fa-facebook"></a> <a href="https://www.instagram.com/waffle_world_cyprus/" class="fa fa-instagram"></a> <a href="https://www.youtube.com/user/CarbonsGoldenMalted/videos" class="fa fa-youtube"></a> </div>
+  </footer>
+</div>
+
+<!-- Product Page -->
+<div id="page_product" style="display: none" > <a onclick="toggle_visibility('page_product');toggle_visibility('page_main');"><img src="img\circled-left-2.png" class="return"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="center">
+    <div class="container">
+      <div> <a class="buttonscenter" onclick="toggle_visibility('page_product');toggle_visibility('page_waffle');">Waffles & Pancakes & Crepes</a></div>
+      <hr style="width: 20%">
+      <div> <a class="buttonscenter" onclick="toggle_visibility('page_product');toggle_visibility('page_equip');">Equipment and Accessories</a></div>
+      <hr style="width: 20%">
+      <div> <a class="buttonscenter" onclick="toggle_visibility('page_product');toggle_visibility('page_topping');">Toppings & Decorations</a></div>
+      <hr style="width: 20%"> 
+      <div> <a class="buttonscenter" onclick="toggle_visibility('page_product');toggle_visibility('page_praline');">Pralines & Creams</a></div>
+      <hr style="width: 20%">
+      <div> <a class="buttonscenter" onclick="toggle_visibility('page_product');toggle_visibility('page_gelato');">Gelato</a></div>
+      <hr style="width: 20%">
+      <div> <a class="buttonscenter" onclick="toggle_visibility('page_product');toggle_visibility('page_smoothie');">Smoothies</a></div>
+      <hr style="width: 20%">
+      <div> <a class="buttonscenter" onclick="toggle_visibility('page_product');toggle_visibility('page_ginseng');">Ginseng</a></div>
+    </div>
+  </div>
+  <hr>
+  <br>
+  <h2 class="text-center" style="color: white;"><b>Cart</b></h2>
+  <div class="cart" style="color: white;"></div>
+  <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
+			  action="https://script.google.com/macros/s/AKfycbzYvmtH4H5plpaXK6-pbw4WZusozu_aKtxq7AqR/exec">
+    <br>
+    <textarea id="cart" name="Order" style="display:none;" ></textarea>
+    <br>
+    <input id="email" name="email" type="email" value=""
+				   required placeholder="your.name@email.com" style="display:none;"/>
+    <br>
+    <button id="primaryButton" style="display: none;"></button>
+    <div class="thankyou_message" style="display:none;">
+      <h2><em>Thanks</em> for contacting us!
+        We will get back to you soon!</h2>
+    </div>
+  </form>
+</div>
+
+<!-- Waffles Page -->
+<div id="page_waffle" style="display: none" > <a onclick="toggle_visibility('page_waffle');toggle_visibility('page_product');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_waffle');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="products">
+    <div class="product">
+          <img src="img/products/whirl.png">
+      <p class="product__name">BUTTER SUBSTITUTES:WHIRL</p>
+      <br>
+      <span>WHIRL Butter Sub * 4ltr</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/awo.gif">
+      <p class="product__name">CARBON'S FLOUR:ADDWATER</p>
+      <br>
+      <span>AWO Waffle Flour * 13.6kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+          <img src="img/products/awo.gif">
+
+      <p class="product__name">CARBON'S FLOUR:ADDWATER-BAG</p>
+      <br>
+      <span>Add Water Only X 2.27kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/coneflour.gif">
+      <p class="product__name">CARBON'S FLOUR:AWCONE</p>
+      <br>
+      <span>Cone Flour AWO * 13.6kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <img src="img/products/crepe_bag.jpg">
+      <p class="product__name">CARBON'S FLOUR:CREPE-CARBONS</p>
+      <br>
+      <span>AWO Crepe Mix 13.6kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">      <img src="img/products/crepe_bag.jpg">
+
+      <p class="product__name">CARBON'S FLOUR:GLUTEN-FREE</p>
+      <br>
+      <span>Gluten Free Waffle & Pancake Mix 6.8kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/orig.gif">
+      <p class="product__name">CARBON'S FLOUR:ORIG8-FREE</p>
+      <br>
+      <span>ORIGINAL Waffle Flour * 13.6kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/orig.gif">
+      <p class="product__name">CARBON'S FLOUR:ORIG8-XBAG</p>
+      <br>
+      <span>ORIGINAL Waffle Flour BAG * 1.7kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/bubble2.jpg">
+      <p class="product__name">DISPOSABLES:BUBBLE-BOXES</p>
+      <br>
+      <span>"Golden Bubbles" Take Away Box X 1100</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/box-1.jpg">
+      <p class="product__name">DISPOSABLES:WAF-BITE-BOX</p>
+      <br>
+      <span>Waffle Bites Box X 140</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/panspray.jpg">
+      <p class="product__name">PANSPRAY</p>
+      <br>
+      <span>Pan Coating Spray * 600ml</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Equipment Page -->
+<div id="page_equip" style="display: none" > <a onclick="toggle_visibility('page_equip');toggle_visibility('page_product');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_equip');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="products">
+    <div class="product">
+     <img src="img/products/abrasive-stone.jpg">
+      <p class="product__name">ABRASIVE-STONE</p>
+      <br>
+      <span>Abrasive Stone</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">EQUIPMENT & ACCESORIES:CUTTER-BITE</p>
+      <br>
+      <span>Waffle Bites Cutter</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/spreader.jpg">
+      <p class="product__name">EQUIPMENT & ACCESORIES:KRAMPOUZ-S/S-SPREADER </p>
+      <br>
+      <span>Stainless Steel Spreader 18cm</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/krampouz-spatula-002-web.jpg">
+      <p class="product__name">EQUIPMENT & ACCESORIES:KRAMPOUZ-SPATULA40</p>
+      <br>
+      <span>Stainless Steel Spatula 40cm</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/cleaning-pad.jpg">
+      <p class="product__name">EQUIPMENT & ACCESORIES:PAD-CREPE</p>
+      <br>
+      <span>Round Wiperpad</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/cleaning-recharge.jpg">
+      <p class="product__name">EQUIPMENT & ACCESORIES:PAD-REPX10</p>
+      <br>
+      <span>Clean + Tampon Replacement Pads</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/warmer2btl.jpg">
+      <p class="product__name">EQUIPMENT & ACCESORIES:WARMER-2BTL</p>
+      <br>
+      <span>KRAMPOUZ Topping Warmer - 2 btls</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/warmer3btl.png">
+      <p class="product__name">EQUIPMENT & ACCESORIES:WARMER-3BTL</p>
+      <br>
+      <span>KRAMPOUZ Topping Warmer - 3 btls</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/whisk.jpg">
+      <p class="product__name">EQUIPMENT & ACCESORIES:WHISK</p>
+      <br>
+      <span>DSK - Whisk</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/fifo-btl.jpg">
+      <p class="product__name">FIFO BOTTLES:FIFO-CB-32-ON</p>
+      <br>
+      <span>32oz / 950ml - Med valve</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/banner/iron_banner.jpg">
+      <p class="product__name">Waffle Irons:CE-IRON-220V</p>
+      <br>
+      <span>CE Waffle Iron 220V (on loan)</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">Waffle Irons:DOMESTIC</p>
+      <br>
+      <span>Domestic Waffle Iron</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">     <img src="img/products/krampouzgasbouble.jpg">
+
+      <p class="product__name">Waffle Irons:KRAMPOUZ/40''/230v/double</p>
+      <br>
+      <span>KRAMPOUZ Electric Crepe Maker 40'' Double</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">     <img src="img/products/electric-crepe-maker-standard-range.jpg">
+
+      <p class="product__name">Waffle Irons:KRAMPOUZ-220V-35CM</p>
+      <br>
+      <span>KRAMPOUZ Electric Crepe Maker 35cm - 220V</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/electric-crepe-maker-standard-range.jpg">
+      <p class="product__name">Waffle Irons:KRAMPOUZ-40''-220V</p>
+      <br>
+      <span>KRAMPOUZ Electric Crepe Maker 40''</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/krampouzgas.jpg">
+      <p class="product__name">Waffle Irons:KRAMPOUZ-40''-GAS</p>
+      <br>
+      <span>KRAMPOUZ Crepe Maker Gas 40'' -RF</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/krampouzgasbouble.jpg">
+      <p class="product__name">Waffle Irons:KRAMPOUZ-40''-GAS-DBL</p>
+      <br>
+      <span>KRAMPOUZ Crepe Maker Gas 40cm Double</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/plancha.jpg">
+      <p class="product__name">Waffle Irons:PLANCHA-64X34-220V</p>
+      <br>
+      <span>KRAMPOUZ ELEC GRIDDLE PLATE 64X34</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Topping Page -->
+<div id="page_topping" style="display: none" > <a onclick="toggle_visibility('page_topping');toggle_visibility('page_product');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_topping');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="products">
+    <div class="product">
+     <img src="img/products/CAN505.jpg">
+      <p class="product__name">BUSSY:CAN505P</p>
+      <br>
+      <span>CANNOLI 19/5 AMARETTO 112 Pieces Small Box</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/CAN506.jpg">
+      <p class="product__name">BUSSY:CAN506P</p>
+      <br>
+      <span>CANNOLI 19/5 ARLECCHINO 112 Pieces Small Box</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/CAN508.jpg">
+      <p class="product__name">BUSSY:CAN508P</p>
+      <br>
+      <span>CANNOLI 19/5 WAFERCACAO 128 Pieces Small Box</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/CIA112.jpg">
+      <p class="product__name">BUSSY:CIA112</p>
+      <br>
+      <span>GELATOARTIGIANO 1,2 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/CIA166.jpg">
+      <p class="product__name">BUSSY:CIA166</p>
+      <br>
+      <span>VENTAGLIO GELATO 300 Pieces</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/CIA97.jpg">
+      <p class="product__name">BUSSY:CIA97</p>
+      <br>
+      <span>FANTASIE kg 0,600</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/CON1000-EXPO2017.jpg">
+      <p class="product__name">BUSSY:CON1000</p>
+      <br>
+      <span>CON100 ESPOSITORE CIOKKIMILK 60 pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/CON960-EXPO2017.jpg">
+      <p class="product__name">BUSSY:CON960</p>
+      <br>
+      <span>CON96 ESPOSITORE LE CIOKKINE 60 pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/LEC07.jpg">
+      <p class="product__name">BUSSY:LEC07</p>
+      <br>
+      <span>LECESTINE CACAO /Cup Cov. In Cacao and Granular Cacao 100pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/LEP03.jpg">
+      <p class="product__name">BUSSY:LEP03</p>
+      <br>
+      <span>LEPETITTE' VANIGLIA 0,800 Kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/LEP03.jpg">
+      <p class="product__name">BUSSY:LEP06</p>
+      <br>
+      <span>LEPETITTE' FRAGOLA 0,800 Kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P04GRAV.jpg">
+      <p class="product__name">BUSSY:P04GRAV</p>
+      <br>
+      <span>MOMPARIGLIA 1 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P06GRAV-P06GRAP.jpg">
+      <p class="product__name">BUSSY:P06GRAV</p>
+      <br>
+      <span>MINI STELLE 800gr - Mini Stars</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P11GRAV-P11GRAP.jpg">
+      <p class="product__name">BUSSY:P11GRAV</p>
+      <br>
+      <span>MERINGA 800 g - GRANELLA MERINGA BIANCA</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P12GRAV-P12GRAP.jpg">
+      <p class="product__name">BUSSY:P12GRAV</p>
+      <br>
+      <span>MERINGA CACAO 800 g</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P13GRAV-P13GRAP.jpg">
+      <p class="product__name">BUSSY:P13GRAV</p>
+      <br>
+      <span>CROCCO CEREALI 1 Kg CEREALI RICOPERTI DI</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P14GRAV-P14GRAP.jpg">
+      <p class="product__name">BUSSY:P14GRAV</p>
+      <br>
+      <span>CROCCO CEREALI BIANCO 1 Kg.</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P14MEV.jpg">
+      <p class="product__name">BUSSY:P14MEV</p>
+      <br>
+      <span>FUNGHETTO - 0,4 kg - MARSHMALLOW A</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P17MEV-P17MEP.jpg">
+      <p class="product__name">BUSSY:P17MEVBIG</p>
+      <br>
+      <span>MINI MARSHMALLOW 0,6 kg PURPURRY</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P19DRAV-P19DRAP.jpg">
+      <p class="product__name">BUSSY:P19DRAV</p>
+      <br>
+      <span>CROCCO CEREALI CAFFE' 1 kg PURPURRY</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P25GRAV-P25GRAP.jpg">
+      <p class="product__name">BUSSY:P25GRAV</p>
+      <br>
+      <span>LETTERINE 0.800 kg - PICCOLE LETTERINE</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P29GRAV-P29GRAP.jpg">
+      <p class="product__name">BUSSY:P29GRAV</p>
+      <br>
+      <span>FUDGE CARAMELLO 1 Kg - CUBETTI DI FUDGE AL</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P36GRAV-P36GRAP.jpg">
+      <p class="product__name">BUSSY:P36GRAV</p>
+      <br>
+      <span>RICCIOLI DUO 0.5 kg - MINI RICCIOLI CIOC. BIANCHI</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P45GRA-P45GRAP.jpg">
+      <p class="product__name">BUSSY:P45GRA</p>
+      <br>
+      <span>CROCKFRUTTA FRUTTI DI BOSCO 1,5Kg -</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P53GRAV-P53GRAP.jpg">
+      <p class="product__name">BUSSY:P53GRAV</p>
+      <br>
+      <span>CRUNCHY ARANCIO 1 kg PURPURRY</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P54GRAV.jpg">
+      <p class="product__name">BUSSY:P54GRAV</p>
+      <br>
+      <span>CRUNCHY BANANA 1 kg PURPURRY</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P55GRAV-P55GRAP.jpg">
+      <p class="product__name">BUSSY:P55GRAV</p>
+      <br>
+      <span>CRUNCHY FRUTTI DI BOSCO 1 kg PURPURRY</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P59GRAV-P59GRAP.jpg">
+      <p class="product__name">BUSSY:P59GRAV</p>
+      <br>
+      <span>CROCCOWAFER 2 kg PURPURRY</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P60GRAV-P60GRAP.jpg">
+      <p class="product__name">BUSSY:P60GRAVBIG</p>
+      <br>
+      <span>MINI BOTTONI 2 kg PURPURRY</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P63GRAV.png">
+      <p class="product__name">BUSSY:P63GRAV</p>
+      <br>
+      <span>RICCIOLI FRAGOLA 0,900 kg - RICCIOLI CIOC. ROSA ALLA FRAGOLA</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P64GRAV.png">
+      <p class="product__name">BUSSY:P64GRAV</p>
+      <br>
+      <span>RICCIOLI ARANCIO 0,900 kg - RICCIOLI CIOCCOLATO ALL' ARANCIO</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P65GRAV.png">
+      <p class="product__name">BUSSY:P65GRAV</p>
+      <br>
+      <span>RICCIOLI VERDI 0,900 kg - RICCIOLI CIOCCOLATO A MELA VERDE</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/P66GRAV.png">
+      <p class="product__name">BUSSY:P66GRAV</p>
+      <br>
+      <span>RICCIOLI GIALLI 0,900 kg - RICCIOLI CIOCCOLATO AL LIMONE</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/SIG33.jpg">
+      <p class="product__name">BUSSY:SIG33</p>
+      <br>
+      <span>SIGARETTA ROSSA 220 Pieces</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/SIG34.jpg">
+      <p class="product__name">BUSSY:SIG34</p>
+      <br>
+      <span>SIGARETTA VERDE 220 Pieces</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/SIG40.jpg">
+      <p class="product__name">BUSSY:SIG40</p>
+      <br>
+      <span>ROLETTE 220 Pieces</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/SIG88.jpg">
+      <p class="product__name">BUSSY:SIG88</p>
+      <br>
+      <span>SIGARETTE WAFERCACAO 350 Pieces</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/TRO02.jpg">
+      <p class="product__name">BUSSY:TRO02</p>
+      <br>
+      <span>MINITROTTOLA 600 pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/cookies.jpg">
+      <p class="product__name">SPRINKLES:BISCOTTI</p>
+      <br>
+      <span>Biscotti Tagliati X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/caramelised_hazelnuts.png">
+      <p class="product__name">SPRINKLES:HAZEL-CARAM-DICED</p>
+      <br>
+      <span>Hazelnut Caramellized Diced X 2.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/Diced-Hazelnut-2-4-MM.jpg">
+      <p class="product__name">SPRINKLES:HAZEL-DICED-2-4MM</p>
+      <br>
+      <span>Diced Hazelnut 2-4mm X 2kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/hazelnut.jpg">
+      <p class="product__name">SPRINKLES:HAZEL-ROUND</p>
+      <br>
+      <span>Roasted Rounded Hazelnut 13/15 X 2kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/f-topping.jpg">
+      <p class="product__name">TOPPINGS:ICETOP-CAR</p>
+      <br>
+      <span>Icetopping Caramel X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/f-topping.jpg">
+      <p class="product__name">TOPPINGS:ICETOP-CHER</p>
+      <br>
+      <span>Icetopping Amarena X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/f-topping.jpg">
+      <p class="product__name">TOPPINGS:ICETOP-CHOC</p>
+      <br>
+      <span>Icetopping Chocolate X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/f-topping.jpg">
+      <p class="product__name">TOPPINGS:ICETOP-FOR</p>
+      <br>
+      <span>Icetopping Frutti di Bosco X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/f-topping.jpg">
+      <p class="product__name">TOPPINGS:ICETOP-STR</p>
+      <br>
+      <span>Icetopping Srawberry X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/pancakesyrup.png">
+      <p class="product__name">TOPPINGS:MAPLE_24OZ</p>
+      <br>
+      <span>Supreme Pancake Syrup 709ml</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/Pure_Maple_Syrup.jpg">
+      <p class="product__name">TOPPINGS:MAPLE-PURE</p>
+      <br>
+      <span>Pure Maple Syrup - Grade A - 32oz</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Paline Page -->
+<div id="page_praline" style="display: none" > <a onclick="toggle_visibility('page_praline');toggle_visibility('page_product');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_praline');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="products">
+    <div class="product">
+     <img src="img/products/caramel_fudge.jpg">
+      <p class="product__name">CHOCOLATE:FUDGE-CAR</p>
+      <br>
+      <span>Caramel Fudge X 3Kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/choc_fudge.jpg">
+      <p class="product__name">CHOCOLATE:FUDGE-CHOC</p>
+      <br>
+      <span>Chocolate Fudge x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/kiba.jpg">
+      <p class="product__name">CHOCOLATE:KIBA</p>
+      <br>
+      <span>Hazelnut Chocolate * 10kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/nocciolata.jpg">
+      <p class="product__name">CHOCOLATE:NOCCIOLATA-D13</p>
+      <br>
+      <span>Nocciolata D13 X 5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/pralina.jpg">
+      <p class="product__name">CHOCOLATE:PRALINA-13KG</p>
+      <br>
+      <span>Pralina 13kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/white.jpg">
+      <p class="product__name">CHOCOLATE:WHITE-3KG</p>
+      <br>
+      <span>White Chocolate Cream Agrifreda 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Gelato Page -->
+<div id="page_gelato" style="display: none" > <a onclick="toggle_visibility('page_gelato');toggle_visibility('page_product');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_gelato');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="products">
+    <div class="product">
+     <img src="img/products/aroma.jpg">
+      <p class="product__name">AROMA IN PASTA:ARO-CARAMELLO </p>
+      <br>
+      <span>Aroma in Pasta Caremello X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/aroma.jpg">
+      <p class="product__name">AROMA IN PASTA:ARO-FRAGOLA </p>
+      <br>
+      <span>AROMA IN PASTA FRAGOLA X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/aroma.jpg">
+      <p class="product__name">AROMA IN PASTA:ARO-LIMONE </p>
+      <br>
+      <span>AROMA IN PASTA LIMONE X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/aroma.jpg">
+      <p class="product__name">AROMA IN PASTA:ARO-PISTACCHIO </p>
+      <br>
+      <span>Aroma in Pasta Pistacchio X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/aroma.jpg">
+      <p class="product__name">AROMA IN PASTA:ARO-VANIGLIA </p>
+      <br>
+      <span>Aroma in pasta VANIGLIA x 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">AROMATIZERS:ARO-FIOR </p>
+      <br>
+      <span>Aroma Fior di Latte TB2301 X 5kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">AROMATIZERS:LEMONBON </p>
+      <br>
+      <span>Lemonbon X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">AROMATIZERS:PANNYBON </p>
+      <br>
+      <span>Pannybon X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">AROMATIZERS:QUARK </p>
+      <br>
+      <span>Cheesecake X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">AROMATIZERS:VANIGIA </p>
+      <br>
+      <span>VANIGIA Elite X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">AROMATIZERS:VANILLINA-POWDER </p>
+      <br>
+      <span>Aroma Vanillina - Powder X 0.5kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">AROMATIZERS:YOGOBON </p>
+      <br>
+      <span>Yogobon Elite X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:BASE-ERMIS </p>
+      <br>
+      <span>BASE ERMIS X 11kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREAM-DELIC50 </p>
+      <br>
+      <span>Cream DELICATA 50 X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREAM-FRED-100 </p>
+      <br>
+      <span>CREAM Freddo 100 X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREAM-FRED50 </p>
+      <br>
+      <span>Cream FREDDO 100 X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREAM-GOLD100 </p>
+      <br>
+      <span>cream GOLD 100 x 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREAM-GOLD50 </p>
+      <br>
+      <span>cream GOLD 50 </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREAM-ROVERELLA </p>
+      <br>
+      <span>Cream ROVERELLA X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREAM-SUPERPAN100 </p>
+      <br>
+      <span>Cream SUPERPANNA 100 X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:CREMANATURALE-EVO100 </p>
+      <br>
+      <span>CREMANATURALE EVO 100 X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:FR-FREDDO-100 </p>
+      <br>
+      <span>Fruit FREDDO 100 x 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:FR-FREDDO-150 </p>
+      <br>
+      <span>Fruit Freddo 150 x 1 kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:FR-NATURALE-EVO50 </p>
+      <br>
+      <span>FRUTTANATURALE EVO 50 X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:OROFREDDO200 </p>
+      <br>
+      <span>Cream OROFREDDO 200 X1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">BASES:YOGURTGELATO </p>
+      <br>
+      <span>YOGURTGELATO X 1kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">FROZEN YOGURT:FRO-YOG10 </p>
+      <br>
+      <span>FrozenYogo10 X 1.3kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:ACE-EASY </p>
+      <br>
+      <span>Lactosefree ACE x 1.25 kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:ANANAS-EASY </p>
+      <br>
+      <span>Lactosefree Ananas X 1.25kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:ANGURIA-EASY </p>
+      <br>
+      <span>Lactosefree Anguria X 1.25 kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:ARANCIA-EASY </p>
+      <br>
+      <span>Lactosefree Arancia X 1.25kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:BANANA-EASY </p>
+      <br>
+      <span>Easy Banana X 1.5 kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:BLUE-KID-EASY </p>
+      <br>
+      <span>Easy Blue Kid X 1.5kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CAFE-EASY </p>
+      <br>
+      <span>Easy Caffe X 1.5kg </span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CALO-CCREMA</p>
+      <br>
+      <span>Calostevia Crema X 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CALO-CIOCK</p>
+      <br>
+      <span>Calostevia Ciock X 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CALO-FRAGOLA</p>
+      <br>
+      <span>Calostevia Fragola X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CALO-LIMONE</p>
+      <br>
+      <span>Calostevia Limone X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CIOCC-EASY</p>
+      <br>
+      <span>Easy Cioccolato X 1.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CIOCC-ZENZ-EASY</p>
+      <br>
+      <span>Chocolate Ginger Easy X 1.8kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CIOC-NERO-EASY</p>
+      <br>
+      <span>Lactosefree Cioccolato Nero x 1.8kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:COCCO-EASY</p>
+      <br>
+      <span>Easy Cocco x 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:CR-BIAN-EASY</p>
+      <br>
+      <span>EasyCrema Bianca X 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:EASY-FDB</p>
+      <br>
+      <span>Lactosefree Fruiti di Bosco X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:EASYFRUIT</p>
+      <br>
+      <span>Lactosefree Fruit X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:FRAG-ROS-EASY</p>
+      <br>
+      <span>Lactosefree Fragola Rossa x 1.25 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:GOJI-MAND-EASY</p>
+      <br>
+      <span>Lactosefree Goji Mandarino X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:KAIMAKI-EASY</p>
+      <br>
+      <span>Kaimaki Easy X 1.2kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:KIWI-EASY</p>
+      <br>
+      <span>Lactosefree Kiwi x 1.25 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:LIME-EASY</p>
+      <br>
+      <span>Lactosefree Lime X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:LIMONE-EASY</p>
+      <br>
+      <span>Lactosefree Limone X 1.25 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:LIMONE-ZENZERO</p>
+      <br>
+      <span>Lactosefree Zenzero Limone X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MANDARINO-EASY</p>
+      <br>
+      <span>Lactosefree Mandarino X 1,25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MANGO-EASY</p>
+      <br>
+      <span>Lactosefree Mango Alphonso X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MASTIHA-EASY</p>
+      <br>
+      <span>Easy Mastiha x 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MATCHA-EASY</p>
+      <br>
+      <span>Easy Matcha X 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MELA-V-EASY</p>
+      <br>
+      <span>Lactosefree Mela Verde X 1,25 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MELON-EASY</p>
+      <br>
+      <span>Lactosefree Melone X 1.25 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MENTA-EASY</p>
+      <br>
+      <span>Easy Menta Fredda x 1.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MIRTILLO-EASY</p>
+      <br>
+      <span>Lactosefree Mirtillo X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:MOJITO-EASY</p>
+      <br>
+      <span>Lactosefree Mojito X 1.25 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:PARFAIT</p>
+      <br>
+      <span>EASYeLATTE PARFAIT Kit (3 bags + Cubetti)</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:PESCA-EASY</p>
+      <br>
+      <span>Lactosefree Pesca X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:PINKOSA-EASY</p>
+      <br>
+      <span>Easy Bubble Pink X 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:POMPELMO-EASY</p>
+      <br>
+      <span>Lactosefree Pompelmo Rosa X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:ROSA-ELITE</p>
+      <br>
+      <span>Lactosefree Rosa x 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:TIRAM-EASY</p>
+      <br>
+      <span>EasyTiramisu X 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:UVA-FRAG_EASY</p>
+      <br>
+      <span>Lactosefree Uva Fragola X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:VANILLA-EASY</p>
+      <br>
+      <span>Easy Vaniglia Gialla X 1.5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">GELATO-EASY:YOGURT-EASY</p>
+      <br>
+      <span>Easy Yogurt X 1.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <img src="img/products/arielleb.jpg">
+      <p class="product__name">ICE CREAM CONES:MIRAN-ARIELLE</p>
+      <br>
+      <span>Arielle Cones X 432pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/arielleblack.jpg">
+      <p class="product__name">ICE CREAM CONES:MIRAN-ARIELLE-BLACK</p>
+      <br>
+      <span>Arielle Black Cones X 432 pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/donalfredo.jpg">
+      <p class="product__name">ICE CREAM CONES:MIRAN-DON-ALFREDO</p>
+      <br>
+      <span>Don Alfredo Cones X 260pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/jumbob.jpg">
+      <p class="product__name">ICE CREAM CONES:MIRAN-JUMBO</p>
+      <br>
+      <span>JUMBO Cones X 252 pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/krossis.jpg">
+      <p class="product__name">ICE CREAM CONES:MIRAN-RINGS-KROSSIS</p>
+      <br>
+      <span>Sweet Rigns 'KROSSIS' X 1000 pcs</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-ALBICOCCA</p>
+      <br>
+      <span>Pasta Albicocca Elite X 3 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">     <img src="img/products/tecnoblend_tub.jpg">
+
+      <p class="product__name">PASTES-GELATO:PASTA-AMARENA</p>
+      <br>
+      <span>Pasta Amarena Elite X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">     <img src="img/products/tecnoblend_tub.jpg">
+
+      <p class="product__name">PASTES-GELATO:PASTA-ANGURIA</p>
+      <br>
+      <span>Pasta Anguria Elite X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-ANTONELLA</p>
+      <br>
+      <span>Pasta Antonella X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-ARACHIDE</p>
+      <br>
+      <span>Pasta Arachide x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-ARANCIA</p>
+      <br>
+      <span>Pasta DolceArancia Elite + Lemonina X 3.6kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-BAC-AMAR</p>
+      <br>
+      <span>Pasta Baciotto Amaro X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-BACIO-D</p>
+      <br>
+      <span>Pasta Bacciotto Dolce X 2.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-BANANA</p>
+      <br>
+      <span>Pasta Banana X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-BANANA-G</p>
+      <br>
+      <span>Pasta Banana Gialla X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-BISCOTTO</p>
+      <br>
+      <span>Pasta Biscotto X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-CACAO</p>
+      <br>
+      <span>Pasta Cacao Fondente x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-CARAMEL</p>
+      <br>
+      <span>Pasta Caramello al Latte x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-CIOCC-BIANCO</p>
+      <br>
+      <span>Pasta Cioccolato Bianco X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-COCCO</p>
+      <br>
+      <span>Pasta Cocco X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-CREM-CAR</p>
+      <br>
+      <span>Pasta Crem Caramel X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-CREMOLATA</p>
+      <br>
+      <span>Pasta Crema Canella x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-DOL-ARANCIA</p>
+      <br>
+      <span>Pasta DolceArancia X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-DOL-FRAGOLA</p>
+      <br>
+      <span>Pasta DolceFragola X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-DOL-LIMONE</p>
+      <br>
+      <span>Pasta DolceLimone X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-DOL-MAND</p>
+      <br>
+      <span>Pasta DolceMandarino X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-FRAGOLA</p>
+      <br>
+      <span>Pasta Fragola X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-FR-BOSC</p>
+      <br>
+      <span>Pasta Fruiti Di Bosco X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-GIANDUJA</p>
+      <br>
+      <span>Pasta Gianduja Dolce X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-LAMPONE</p>
+      <br>
+      <span>Pasta Lampone X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-LATTEV</p>
+      <br>
+      <span>Pasta Latte Vuala' x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-LIMONE</p>
+      <br>
+      <span>Pasta DolceLimone + Lemonina X 3.6kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-LOLITA</p>
+      <br>
+      <span>Pasta Lolita X 2.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MALAGA</p>
+      <br>
+      <span>Pasta Malaga Elite x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MANDARINO</p>
+      <br>
+      <span>Pasta Dolcemandarino + Lemonina X 3.6 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MANGO</p>
+      <br>
+      <span>Pasta Mango Alphonso X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MASTIHA</p>
+      <br>
+      <span>Pasta Mastiha X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MELA-V</p>
+      <br>
+      <span>Pasta Mela Verde x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MELONE</p>
+      <br>
+      <span>Pasta Melone X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MENTA</p>
+      <br>
+      <span>Pasta Menta Latte Elite X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MENTA-XTR</p>
+      <br>
+      <span>Pasta Menta Extra X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-MIRTILLO</p>
+      <br>
+      <span>Pata Mirtillo x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-NOCCI-100%S</p>
+      <br>
+      <span>Pasta Nocciola 100% S X 5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-NOCC-ORO</p>
+      <br>
+      <span>Pasta Nocciola ORO X 2.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-NOCIOLA-TONDA</p>
+      <br>
+      <span>Pasta Nocciola Tonda Gentile Tribolata X 2.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-PANNAC</p>
+      <br>
+      <span>Pasta Panna Cotta Elite x 3 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-PASSION-FR</p>
+      <br>
+      <span>Pasta Frutto Della Passione X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-PERA</p>
+      <br>
+      <span>Pasta Pera X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-PESCA</p>
+      <br>
+      <span>Pasta Pesca x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-PIST-ELITE</p>
+      <br>
+      <span>Pasta Pistacchio X 2.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-PIST-SIC100S</p>
+      <br>
+      <span>Pasta Pistacchio Puro di Sicilia 100% S X 2.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-TIRAMISU</p>
+      <br>
+      <span>Pasta Tiramisu X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-TORRONE</p>
+      <br>
+      <span>PASTA TORRONE X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-VAN-100%</p>
+      <br>
+      <span>Pasta Vaniglia Naturale 100% x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-VAN-BOURB</p>
+      <br>
+      <span>Pasta Vaniglia Bourbon Elite X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-VAN-GOLD</p>
+      <br>
+      <span>Pasta Vaniglia Gold Elite x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-VAN-MADAG</p>
+      <br>
+      <span>Pasta Vaniglia Madagascar X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-VAN-TAHITI</p>
+      <br>
+      <span>Pasta Vaniglia Tahiti X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_tub.jpg">
+      <p class="product__name">PASTES-GELATO:PASTA-ZUPPA</p>
+      <br>
+      <span>Pasta Zuppa Inglese Elite x 1.25 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:ACTIPLUS</p>
+      <br>
+      <span>ACTIPLUS x 5 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:GUMCARRUBA-V24</p>
+      <br>
+      <span>GUMCARRUBA V24 X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:GUMCREAM-COLD</p>
+      <br>
+      <span>GUMCREAM COLD X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:GUMFRUIT COLD</p>
+      <br>
+      <span>GUMFRUIT COLD X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:GUMFRUTTA-FREE</p>
+      <br>
+      <span>GUMFRUTTA FREE X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:GUM-ME78</p>
+      <br>
+      <span>GUMCREAM ME78 X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:GUM-P35</p>
+      <br>
+      <span>GUMCREAM P35 X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:GUMSORB-SI100</p>
+      <br>
+      <span>GUMSORBETTO SI100 x 10 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_bag.jpg">
+      <p class="product__name">STABILIZERS:STABILI-SORBETTI</p>
+      <br>
+      <span>Stabilizzante Sorbetti X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">STRUCTURE IMPROVERS:CREMOSO-1KG</p>
+      <br>
+      <span>CREMOSO X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">STRUCTURE IMPROVERS:FAT-PIU-1KG</p>
+      <br>
+      <span>FAT PIU X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">STRUCTURE IMPROVERS:FIBRA-PIU-1KG</p>
+      <br>
+      <span>FIBRA PIU X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">STRUCTURE IMPROVERS:PROMIL-GEL</p>
+      <br>
+      <span>PROMIL GEL X 1 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">STRUCTURE IMPROVERS:STABILE GR</p>
+      <br>
+      <span>STABILE GR X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+      <p class="product__name">SUGARS:ISOMALTO</p>
+      <br>
+      <span>Isomalt X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/aroma.jpg">
+      <p class="product__name">TOPPINGS:STRACC-BIANC-0.9</p>
+      <br>
+      <span>Stracciatella Bianca X 0.9 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/aroma.jpg">
+      <p class="product__name">TOPPINGS:STRACC-FOND-0.9</p>
+      <br>
+      <span>Stracciatella Fondente X 0.9 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/aroma.jpg">
+      <p class="product__name">TOPPINGS:STRACCIA-FOND</p>
+      <br>
+      <span>Stracciatella Fondente x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/aroma.jpg">
+      <p class="product__name">TOPPINGS:STRACCIA-FOND-3KG</p>
+      <br>
+      <span>Stracciatella Fondente X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/aroma.jpg">
+      <p class="product__name">TOPPINGS:STRACC-LATTE0.9</p>
+      <br>
+      <span>Stracciatella al Latte X 0.9 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+<img src="img/products/tecnoblend_Variegato.jpg">      <p class="product__name">VARIEGATO:AMYDARK</p>
+      <br>
+      <span>Amydark X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:NAOMI</p>
+      <br>
+      <span>Naomi x 3KG</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-AMARENA</p>
+      <br>
+      <span>Variegato Amarena Elite X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-ANTONELLA</p>
+      <br>
+      <span>Variegato Antonella No-Ice X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-ARACHIDE</p>
+      <br>
+      <span>Variegato Arachide x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-BIANCO</p>
+      <br>
+      <span>Variegato Bianco No-Ice X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-BIAN-COCO</p>
+      <br>
+      <span>Variegato BiancoCocco x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-BISCOTTO</p>
+      <br>
+      <span>Variegato Biscotto X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-CARAMELL</p>
+      <br>
+      <span>Variegato Caramellate x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-CHEESCAKE</p>
+      <br>
+      <span>Variegato Cheesecake X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-CIOCCO</p>
+      <br>
+      <span>Variegato Cioccolato X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-DARKCHERRY</p>
+      <br>
+      <span>Variegato Dark Cherry X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-FRAGOLA</p>
+      <br>
+      <span>Variegato Fragola x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-FRUIT-BOSC</p>
+      <br>
+      <span>Variegato Fruiti Di Bosco Elite X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-GOJI-LAMP</p>
+      <br>
+      <span>Variegato Goji Raspberry X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-LATTE-GRAN</p>
+      <br>
+      <span>Variegato Latte Granellato X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-LIME</p>
+      <br>
+      <span>Variegato Lime X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-LIM-ZENZERO</p>
+      <br>
+      <span>Variegato Lemon Ginger X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-LOL</p>
+      <br>
+      <span>Variegato Lolita X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-L-VUOLA</p>
+      <br>
+      <span>Variegato Latte Vuola X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-MATCHA</p>
+      <br>
+      <span>Variegato Matcha X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-MIRTILLO</p>
+      <br>
+      <span>Variegato Mirtillo X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-OLE</p>
+      <br>
+      <span>Variegato Ole X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-PES-OR</p>
+      <br>
+      <span>Variegato Pescarancio X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-RISOCAO</p>
+      <br>
+      <span>Variegato Risocacao X 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/tecnoblend_Variegato.jpg">
+      <p class="product__name">VARIEGATO:VAR-WAF-GRANEL</p>
+      <br>
+      <span>Variegato Wafercacao Granellato x 3kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-CANAPA</p>
+      <br>
+      <span>Vegan Canapa X 1.6kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-COCCO</p>
+      <br>
+      <span>Vegan Cocco X 1.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-FONDENTE</p>
+      <br>
+      <span>Vegan Fondente X 1.8 kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-FRAGOLA</p>
+      <br>
+      <span>Vegan Fragola X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-LIMONE</p>
+      <br>
+      <span>Vegan Limone X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-MANDAR</p>
+      <br>
+      <span>Vegan Mandarino X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-MELA</p>
+      <br>
+      <span>Vegan Mela X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-MELOGRAN</p>
+      <br>
+      <span>Vegan Melograno X 1.25kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product"><img src="img/products/VEGAN-FRAGOLA-N02941.png">
+      <p class="product__name">VEGAN GELATO:VEGAN-VANIGLIA</p>
+      <br>
+      <span>Vegan Vaniglia X 1.5kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Smoothies Page -->
+<div id="page_smoothie" style="display: none" > <a onclick="toggle_visibility('page_smoothie');toggle_visibility('page_product');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_smoothie');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="products">
+    <div class="product">
+     <img src="img/products/brividi_poster.jpg">
+      <p class="product__name">BRIVIDI DOLCI:BRIVIDI-CAP</p>
+      <br>
+      <span>Cappuccino Gustoso X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/brividi_poster.jpg">
+      <p class="product__name">BRIVIDI DOLCI:BRIVIDI-CREME-BRUL</p>
+      <br>
+      <span>Creme Brulee Italiana X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/brividi_poster.jpg">
+      <p class="product__name">BRIVIDI DOLCI:BRIVIDI-GOCCE</p>
+      <br>
+      <span>Gocce di Cioccolato X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/brividi_poster.jpg">
+      <p class="product__name">BRIVIDI DOLCI:BRIVIDI-MOCHA</p>
+      <br>
+      <span>Chocolate Mocha X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/brividi_poster.jpg">
+      <p class="product__name">BRIVIDI DOLCI:BRIVIDI-VANIGLIA</p>
+      <br>
+      <span>Vaniglia Preziosa X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/brividi_poster.jpg">
+      <p class="product__name">BRIVIDI DOLCI:BRIVIDI-YOGURT</p>
+      <br>
+      <span>Yogurt Leggero X 1kg</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Ginseng Page -->
+<div id="page_ginseng" style="display: none" > <a onclick="toggle_visibility('page_ginseng');toggle_visibility('page_product');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_ginseng');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="products">
+    <div class="product">
+     <img src="img/products/ginseng-matcha.jpg">
+      <p class="product__name">GINSENG:GINS-MATCHA</p>
+      <br>
+      <span>INTENSHO Ginseng Matcha Coffee 6 X 600gr</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/ginseng-zenzero.jpg">
+      <p class="product__name">GINSENG:GINS-ZENZERO</p>
+      <br>
+      <span>INTENSHO Ginseng Ginger Coffee 6 X 600gr</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+    <div class="product">
+     <img src="img/products/Ginseng Malchine.png">
+      <p class="product__name">GINSENG-MACHINE_DOUBLE</p>
+      <br>
+      <span>Ginseng Macchina Doppia Mini</span><br>
+      <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Account Page -->
+<div id="page_account" style="display: none"> <a onclick="toggle_visibility('page_account');toggle_visibility('page_main');"><img src="img\circled-left-2.png" class="return"> </a> <a onclick="toggle_visibility('page_account');toggle_visibility('page_product');"><img src="img\cart.png" class="cart_re"> </a> <img src="img\waffle_logo.png" class="center">
+  <hr>
+  <div class="center">
+    <div class="container">
+      <button onclick="logout();" class="button1">Logout</button>
+    </div>
+    <hr>
+  </div>
+  <footer>
+    <div class="row">
+      <div class="column"> <a href="http://www.tecnoblend.it/" target="_blank" > <img src="img\tecnoblend_logo.png" class="footh"> </a> </div>
+      <div class="column"> <a href="https://www.goldenmalted.com/"  target="_blank" > <img src="img\new_carbons_logo.png" class="footh2"> </a> </div>
+      <div class="column"> <a href="https://www.bussy.it/"  target="_blank" > <img src="img\bussy_logo.png" class="footh3"> </a> </div>
+    </div>
+    <div class="row SM_pos"> <a href="https://www.facebook.com/waffleworldcy/" class="fa fa-facebook"></a> <a href="https://www.instagram.com/waffle_world_cyprus/" class="fa fa-instagram"></a> <a href="https://www.youtube.com/user/CarbonsGoldenMalted/videos" class="fa fa-youtube"></a> </div>
+  </footer>
+</div>
+
+
+</body>
+<script data-cfasync="false" type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/fireini.js"></script>
+<script src="js/index.js"></script>
+</html>
